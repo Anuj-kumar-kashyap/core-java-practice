@@ -5,5 +5,15 @@ For world wide java was comes with JDK version 1.0 in 1995.
 Java gain popularity with its version 1.5 also known as JDK5 in 2004.
 In 2010 java was owned by Oracle for 7.4b$.
 
+Tokens: Smallest unit of program.
+Identifiers: Name of class, variables, methods, etc.
+In java we have some rules for naming.
+1. Allowed characters: a-z, A-Z, 0-9, and two special characters ($ and _).
+2. We cannot start any name with numeric digit. (Example: 1a, 4d, etc)
+3. Case sensitive. (name, Name both are different)
+4. Length limit of characters. (In java we can give name as long we want but more than 15 character are not recommended)
+5. We cant use name of reserved words.(which are 53 in java)
+6. We can use the name of predefined classes and Identifiers.
+
 
 

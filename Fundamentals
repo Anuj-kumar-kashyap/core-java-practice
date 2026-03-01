@@ -15,5 +15,21 @@ In java we have some rules for naming.
 5. We cant use name of reserved words.(which are 53 in java)
 6. We can use the name of predefined classes and Identifiers.
 
+Reserved words(53): further divided into 50 keywords & 3 constant literals.
+constant literals: true,false,null
+50 keywords: 48 used keywords, 2 unused.
+2 unused: goto & const
+48 used keywords: Data types(8), Access modifiers(11), Control statements(11), Exception handling(6), Object related(4), Class related(6)
+Data types(8): byte, short, int, long, float, double, character, boolean
+Access modifiers(11): public, private, protected, final, abstract, static, strictfp(1.2v), synchronized, native, transient, volatile
+Control statements(11): if, else, for, do, while, switch, case, break, continue, default, return
+Exception handling(6): try, catch, throw, throws, finally, assert(1.4v)
+Object related(4): new, instanceof, super, this
+Class related(6): class, import, package, implements, extends, interface
+(void & enum(1.5v)): These two doesn't belogs to any cattegory.
+
+
+
+
 
 

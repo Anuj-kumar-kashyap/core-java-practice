@@ -38,6 +38,7 @@ Scanner s; (here s is a variable of class Scanner)
 byte data type used widely in context with applicaton: In Java, the byte data type is very important and commonly used because most digital data is stored and transmitted in the form of bytes.
 
 Now checking each data type:
+
 Integer data types
 1. byte(1B): we can use between -128 to 127.
 public class First {
@@ -73,10 +74,64 @@ public class First {
         System.out.println(a);
     }
 }
+
 Floating data types
+
 1. float(4B):  
+public class First {
 
+    public static void main(String[] args) {
+        float a = 25.3f; //we have to put f at the end of float value otherwise it is consider as double & we can't assign double value in float type variable
+        System.out.println(a);
+    }
+}
+public class First {
 
+    public static void main(String[] args) {
+        float a = 25.3; //Type mismatch: cannot convert from double to float
+        System.out.println(a);
+    }
+}
+2. double(8B): 
+public class First {
+
+    public static void main(String[] args) {
+        double a = 25.3; 
+        System.out.println(a);
+    }
+}
+byte -> short -> int -> long -> float -> double
+char - > int -> long.. here we can store int into char also.
+In this flow we can store the values of different data types in difff types. but vice versa is not true.
+
+Difference between float & double:
+FLOAT: 
+4-5 values after decimal. (4.234)
+Taking 4 byte space in memory
+single precision(32bits)
+Range from -3.4*10power(38) to 3.4*10power(38)
+DOUBLE:
+14-16 values after decimal.(4.23634634355)
+Taking 8 byte space in memory
+double precision(64bits)
+Range from -1.7*10power(308) to 1.7*10power(308)
+
+Character(2B): 
+All programming languages that follow the ASCII table usually store each character in 1 byte (8 bits). That means one character takes 1 byte of memory.
+However, Java does not follow ASCII. It follows Unicode, so in Java each character (char data type) uses 2 bytes (16 bits) of memory. 
+Because of this, Java can support a much larger number of characters compared to ASCII-based languages.
+
+BOOLEAN(1b): 
+public class First {
+
+    public static void main(String[] args) {
+        boolean a = true;
+        boolean b = True;//Invalid(True cannot be resolved to a variable)
+        boolean b = "true";// Invalid(Type mismatch: cannot convert from String to boolean)
+        boolean b = 0;//Invalid(Type mismatch: cannot convert from int to boolean)
+
+    }
+}
 
 Pure OOPS: all concepts of oops should be followed + using non-primitive data types only
 programming language which obeys the above two conditions such programming languages are pure Object oriented.

@@ -132,16 +132,82 @@ public class First {
 
     }
 }
-Primitive    Default value     Non-primitive(wrapper class)
-  byte  ->         0      ->       Byte
-  short ->         0      ->       Short
-  int   ->         0      ->       Integer
-  long  ->         0      ->       Long
-  float ->        0.0f    ->       Float
-double  ->        0.0d    ->       Double
-   Char ->        space   ->       Character
-boolean ->        faluse  ->       Boolean
+Primitive         Default value    Non-primitive(wrapper class)
+  byte(1B)   ->         0       ->       Byte
+  short(2B)  ->         0       ->       Short
+  int(4B)    ->         0       ->       Integer
+  long(8B)   ->         0       ->       Long
+  float(4B)  ->        0.0f     ->       Float
+double(8B)   ->        0.0d     ->       Double  
+   Char2B)   ->       space     ->       Character
+boolean(1b)  ->       faluse    ->       Boolean
 
+What we can declare inside a class:
+class First{
+    int x;// instance variable
+    First t1 = new First();// instance object
+    static int y ;//static variable
+    static First t2 = new First();//static object
+    int x1 [] = new int[5];//instance array
+    static int y1[] = new int[5];// static array
+    static{
+        // static block
+    }
+
+    {
+        //instance block
+    }
+
+    First(){
+        //Constructor
+    }
+
+    public static void m1(){
+        //static method
+
+    }
+    
+    public void m2(){
+        //instance method
+    }
+}
+If we declare any variable inside inside any block(Block maybe: method, constructor, basically b/w {} ) then it is known as local variable.
+
+Types of variables on the basis of position in a class-
+1. Instance/object-level/non-static variables: Values of these type of variables varies from object to object.
+ By default value(0) provided by JVM, loads into the memory at the time of object creation, load in heap area, accessible by using reference variable only.
+Declare inside the class but outside all the blocks without static keyword. Lifecycle(Instance var) = Lifecycle(Object) 
+public class First {
+    int x, y;
+    public static void main(String[] args) {
+        System.out.println(x);//Cannot make a static reference to the non-static field x(Becausd here we are trying to access instance var. without reference)
+    }
+}
+public class First {
+    int x, y;
+    public static void main(String[] args) {
+        First t1 = new First();
+        System.out.println(t1.x);// Here we get def value provided by JVM which is 0 
+        t1.x = 100;// updating value from 0 to 100
+        System.out.println(t1.x);// here we het 100
+    }
+}
+
+2. Static/class level variables: Values doesn't varies from object to object, Common for all objects.
+By default value(0) provided bu JVM, loades when class load, Lifecycle(static var) = Lifecycle(class), Load inside method area.
+Declare inside the class but outside all the blocks with static keyword. Accessible by (reference variable, class name and directly)
+public class First {
+    static int x;
+    public static void main(String[] args) {
+        First t1 = new First();
+        First t2 = new First();
+        System.out.println(x);//Direct access
+        t1.x = 100;
+        System.out.println(t2.x);//100 (By reference access)
+        System.out.println(First.x );//100 (By class name)
+    }
+}
+Best way to access static variables is by class name.
 
 Pure OOPS: all concepts of oops should be followed + using non-primitive data types only
 programming language which obeys the above two conditions such programming languages are pure Object oriented.

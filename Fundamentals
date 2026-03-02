@@ -132,13 +132,21 @@ public class First {
 
     }
 }
+Primitive    Default value     Non-primitive(wrapper class)
+  byte  ->         0      ->       Byte
+  short ->         0      ->       Short
+  int   ->         0      ->       Integer
+  long  ->         0      ->       Long
+  float ->        0.0f    ->       Float
+double  ->        0.0d    ->       Double
+   Char ->        space   ->       Character
+boolean ->        faluse  ->       Boolean
+
 
 Pure OOPS: all concepts of oops should be followed + using non-primitive data types only
 programming language which obeys the above two conditions such programming languages are pure Object oriented.
 java does not follow multiple inheritance & hybrid inheritance and using primitive data types like int, float, etc. So we can say that java is not pure object oriented.
 Their are some language like 'Ruby' & 'small talk' which are pure object oriented. 
-
-
 
 
 

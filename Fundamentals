@@ -209,14 +209,103 @@ public class First {
 }
 Best way to access static variables is by class name.
 
+3. Local/temporary/stack/automatic variable: Declare inside the block(block maybe method, constructor or any other)
+when these blocks loades into the memory at that time local variables also load automatically into the memory. Store inside the stack area.
+These variables do not have their default values by JVM, not even garbage, we have to assign their default values. Their is no garbage value concept in java.
+public class First {
+
+    public static void main(String[] args) {
+        int x;
+        System.out.println(x);//The local variable x may not have been initialized
+    }
+}
+public class First {
+
+    public static void main(String[] args) {
+        int i = 1;
+        for(int j = 1; j<4; j++){
+            j = j+1;
+        }
+        System.out.println(i+j);//j cannot be resolved to a variable
+    }
+}
+Local variable must be initialized before use.
+
+When we press Enter to run a Java program, some processing happens before we get the output.
+1. JVM start.
+2. JVM create a thread named 'main-thread'.
+3. main thread load the class in method area.
+4. Execute main method(PSVM), then main method print the output.
+Now, after execution of whole main method
+5. class unload.
+6. main thread destroyed.
+7. JVM shutdown.
+So, when program is in running state it is called thread(main), process.
+
+var-arg mehod(JDK 1.5V): Accept 'n' number of arguments.
+Syntax(void function_name(data type ...
+var-arg: variable no. of argument method
+public class First {
+    public static void m1(int... x) {// (...) is ellipse operator
+        System.out.println(1);
+    }
+    public static void main(String[] args) {
+        m1(null);
+        m1(10);
+        m1(10, 20);
+        m1(10, 20, 30);
+    }
+}
+This ellipse/var-arg method implements array internally, that is why it accepts n no. of arguments.
+Prove of the above statemtnt:
+public class First {
+    public static void m1(int... x) {
+        int total = 0;
+        for (int i = 0; i < x.length; i++) {
+            total = total + x[i];
+        }
+        System.out.println(total);
+    }
+
+    public static void main(String[] args) {
+        m1(0);//0
+        m1(30);//30
+        m1(20, 70);//90
+        m1(30, 60, 40);//130  
+    }
+}
+Because, is finds the total of arguments we provide, it meams x internally implements an array.
+So, in public static void main(String[] args), instead of using[] we can also use (...).
+Valid/Invalid case:
+m1(int ... x) {//valid
+m1(int ...x) {//valid
+m1(int... x) {//valid
+m1(int...x) {//valid
+m1(int.. .x) {// Invalid(Syntax error on tokens, delete these tokens)
+m1(int .x..) {//Invalid(Syntax error on token ".", ... expected)
+m1(int x...) {//Invalid(Syntax error on token "...", delete this token) 
+m1(int x, int ...b) {//Valid
+m1(int ... x, int y) {//Invalid(The variable argument type int of the method m1 must be the last parameter)
+m1(int ... x, int ... y) {//Invalid(The variable argument type int of the method m1 must be the last parameter)
+
+public class First {
+
+    public static void m1(int x){
+        System.out.println("1");
+    }
+    public static void m1(int ... x){
+        System.out.println("2");
+    }
+    public static void main(String[] args) {
+        m1();// 2, it goes to var-arg method
+        m1(10);//1, norma method > var-arg method
+        m1(10, 20, 30);//2, it goes to var-arg method
+    }
+
+}
+So, whenever their is conflict b/w var-arg method & normal method, then argument goes to normal method.
+
 Pure OOPS: all concepts of oops should be followed + using non-primitive data types only
 programming language which obeys the above two conditions such programming languages are pure Object oriented.
 java does not follow multiple inheritance & hybrid inheritance and using primitive data types like int, float, etc. So we can say that java is not pure object oriented.
 Their are some language like 'Ruby' & 'small talk' which are pure object oriented. 
-
-
-
-
-
-
-

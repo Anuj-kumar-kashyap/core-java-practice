@@ -28,6 +28,64 @@ Object related(4): new, instanceof, super, this
 Class related(6): class, import, package, implements, extends, interface
 (void & enum(1.5v)): These two doesn't belogs to any cattegory.
 
+Data types: Primitive & non-primitive 
+primitives are further divided into:
+Integers(byte, short, int, long)
+floating-point(float, double)
+character, boolean
+non-primitive: variables which are of type class.
+Scanner s; (here s is a variable of class Scanner)
+byte data type used widely in context with applicaton: In Java, the byte data type is very important and commonly used because most digital data is stored and transmitted in the form of bytes.
+
+Now checking each data type:
+Integer data types
+1. byte(1B): we can use between -128 to 127.
+public class First {
+
+    public static void main(String[] args) {
+        byte a = 128; // Type mismatch: cannot convert from int to byte
+        System.out.println(a);
+    }
+}
+
+2. short(2B): we can use between -32768 to 32767
+In early time we use short data type over int because on that time we have 16-bit processor which is compatible to short(16bit).
+ public class First {
+
+    public static void main(String[] args) {
+        short a = 32768; // Type mismatch: cannot convert from int to short
+        System.out.println(a);
+    }
+} 
+3. int(4B): we can use between -2147483647 to 2147483647
+public class First {
+
+    public static void main(String[] args) {
+        int a = 2147483648; //The literal 2147483648 of type int is out of range
+        System.out.println(a);
+    }
+}
+4.long(8B): we can use between -2power63 to 2power63
+public class First {
+
+    public static void main(String[] args) {
+        long a = 214748364l; // we have to put l or L at the end of the long value
+        System.out.println(a);
+    }
+}
+Floating data types
+1. float(4B):  
+
+
+
+Pure OOPS: all concepts of oops should be followed + using non-primitive data types only
+programming language which obeys the above two conditions such programming languages are pure Object oriented.
+java does not follow multiple inheritance & hybrid inheritance and using primitive data types like int, float, etc. So we can say that java is not pure object oriented.
+Their are some language like 'Ruby' & 'small talk' which are pure object oriented. 
+
+
+
+
 
 
 

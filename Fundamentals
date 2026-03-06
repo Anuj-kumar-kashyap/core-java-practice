@@ -305,6 +305,37 @@ public class First {
 }
 So, whenever their is conflict b/w var-arg method & normal method, then argument goes to normal method.
 
+
+Main method:  
+
+public static void main(String[] args) {
+        
+    }
+Public(access modifier): Main method shoud be available for JVM, that's why main method is public.
+Static: bec. static is class level, when class loads static also load, Calls without object.
+void: return type.
+String[] args: Command line arguments, such parameters which are passed to the main method before executing the program, & all are of string type.
+args can be anything
+public static void main(String[] abcd)//executes without any error
+
+synchronized final public static void main(String[] arg)// this is valid
+sequence of modiferis doesn't matter in any sequence we can use modifiers with main method.
+
+minimun requirement of JVM: public static void main(String[] arg), 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
 Pure OOPS: all concepts of oops should be followed + using non-primitive data types only
 programming language which obeys the above two conditions such programming languages are pure Object oriented.
 java does not follow multiple inheritance & hybrid inheritance and using primitive data types like int, float, etc. So we can say that java is not pure object oriented.

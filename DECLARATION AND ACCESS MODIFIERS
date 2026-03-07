@@ -1,1 +1,88 @@
+Rules of saving class in java:
+
+1. If a class is not public then we can save that file with any name.
+ class C {//Here we can save this file with C.java, B.java and with other name also.
+
+}
+
+2. If we have multiple classes without public then we can save with any name as above.
+class A {
+
+}
+class B{
+
+}
+class C{
+    
+}
+
+3. In one file we cannot make more than one class as public
+public class A {
+}
+public class B{
+    //The public type B must be defined in its own file
+}
+public class C{
+    //The public type C must be defined in its own file
+}
+
+-----------------------------------
+
+class B{
+    public static void main(String[] args) {
+        System.out.println("1");//1
+    }
+
+}
+If we create a class B in a file with name A.java & we compile the file (javac A.java) then we get class file(B.class) then we have to run that class file(java B)
+but if we run with(java A) then we get an exception (java.lang.ClassNotFoundException: A)
+-----------------------------------------
+class B{
+    public static void main(String[] args) {
+        System.out.println("1");
+    }
+}
+class C{
+    public static void main(String[] args) {
+        System.out.println("2");
+    }
+}
+class D{
+    public static void main(String[] args) {
+        System.out.println("3");
+    }
+}
+Here, after compilation we get 3 class files (B.java, C.java, D.java) and if we run class C(java C) then as O/P we get 2,  
+if class D (java D) then we get 3 as O/P.
+
+4. In a file we can make 1 class as public & other without public. but classes more than 1 public is not allowed.
+public class A {//Here we must have to save the file with A.java, bec we make Class A as public.
+}
+class B{
+}
+class C{
+}
+after compilation we get 3 class files (A.java, B.java, C.java)
+----------------------------------------------
+public class A {
+}
+public class B{//Herer we get an error: class B is public, should be declared in a file named B.java
+}
+class C{
+}
+And if we save this file with B.java as well then also it give the same error regarding class A that(error: class A is public, should be declared in a file named BA.java)
+
+A empty java file which is saved with any name(.java extension) but it is empty also a valid java program because it compile without any error.
+
+import statement:
+
+
+
+
+
+
+
+
+
+
 

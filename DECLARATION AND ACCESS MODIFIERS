@@ -76,6 +76,37 @@ A empty java file which is saved with any name(.java extension) but it is empty 
 
 import statement:
 
+public class A {
+
+    public static void main(String[] args) {
+        ArrayList l = new ArrayList();
+    }
+}
+//compile time error: cannot find symbol ArrayList l = new ArrayList();
+Symbol: class Arraylist
+compiler know that Arraylist is a class but don't know where it is present.
+
+So we have to import the path for compiler
+import java.util.ArrayList;//here we give the import statemtnt
+public class A {
+
+    public static void main(String[] args) {
+        ArrayList l = new ArrayList();
+    }
+}
+----------------------------
+public class A {
+    public static void main(String[] args) {
+        java.util.ArrayList l = new  java.util.ArrayList();//we can import package in this way also this way names as: fully Qualified name
+    }
+}
+
+import java.util.ArrayList; // Explicit
+import java.util.* // Implicit (* means so many classes)
+
+Classes contained by the .lang package, we don't have to import them manually they are already imported with .lang package.
+ 
+
 
 
 

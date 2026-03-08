@@ -100,13 +100,34 @@ public class A {
         java.util.ArrayList l = new  java.util.ArrayList();//we can import package in this way also this way names as: fully Qualified name
     }
 }
+we don't need to import the (java.lang & current working directory) package manually, they are already imported.
+import java.util.ArrayList; // Explicit: Here we exactly define the class which we need.
+import java.util.* // Implicit (* means so many classes) Here compiler search by itself that where the needed class is present So it is time consuming.
+Explicit import statement have more priority over the Implicit.
 
-import java.util.ArrayList; // Explicit
-import java.util.* // Implicit (* means so many classes)
+import java.util;// Invalid
+import java.util.ArrayList.*;// Invalid
+import java.util.*;// Valid
+import java.util.ArrayList;// Valid
 
-Classes contained by the .lang package, we don't have to import them manually they are already imported with .lang package.
- 
+class A extends java.util.ArrayList{
+    
+}
+//If a needed class is inheritable then we can import that class like this using extends keyword without import statement
+-------------------------------------------------------
+import java.util.*;
+import java.sql.*;;
 
+class A {
+
+    public static void main(String[] args) {
+        Date d = new Date();
+        
+    }
+}
+//This date class is present in both above imported packages, but we compile this program we get an erro
+//error: reference to Date is ambiguous, both class java.squl.Date in java.sql and class java.util.Date in java.util match
+//So here neither the date of sql and nor the date of util will be considered
 
 
 

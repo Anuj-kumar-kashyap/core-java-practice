@@ -174,7 +174,10 @@ But among all these concepts one of the one concept is removed (static import st
 Static import: This concept is added so that we can use static method directly in our program, but such kind of concept already present in java.
 And static method gives us allowence that we can enter in any class also, which is not good, because our default import statement doesn't allow us to enter in a class.
 
-
+Package statement: 
+1.Modularity: It provides modularity, we can store similar types of class in a single folder.
+2. Name conflict: We cannot store classes having same name in a package, due to name conflict issue.
+3. Security: Package provides us security, by making the class as default we can access that class only in that package not in any other package.
 
 
 

@@ -129,6 +129,58 @@ class A {
 //error: reference to Date is ambiguous, both class java.squl.Date in java.sql and class java.util.Date in java.util match
 //So here neither the date of sql and nor the date of util will be considered
 
+import java.util.Date;
+import java.sql.*;;
+
+class A {
+
+    public static void main(String[] args) {
+        Date d = new Date();//Here this Date is the object of util package.
+        
+    }
+}
+//Here it compile successfully because for util package we are using Explicit import statement and it has more priority than implicity which is java.sql
+
+Current working directory: If we create two files in one folder(directory), then method created in a class can be called in another file's class by creating an object of method class.
+
+class A{
+    public void m1() {
+        System.out.println("helo");
+    }
+}
+
+class B{
+    public static void main(String[] args) {
+        A a = new A();
+        a.m1();// it prints helo 
+    }
+}
+//Here both the files in same directory that's why they executes without importing the class.
+
+Important features comes with JDK(v1.5):
+1. For-each loop, applicable only on Array.
+2. Var-arg method.
+3. Queue in Collection framework.
+4. Auto-boxing & Auto-unboxing.
+5. Co-varient return type.
+6. Annotations
+7. enum
+8. static import statement
+9. String builder
+10. Generics
+These concepts plays very significat role in java due to these features java become popular with JDK(v1.5)
+But among all these concepts one of the one concept is removed (static import statement)
+
+Static import: This concept is added so that we can use static method directly in our program, but such kind of concept already present in java.
+And static method gives us allowence that we can enter in any class also, which is not good, because our default import statement doesn't allow us to enter in a class.
+
+
+
+
+
+
+
+
 
 
 

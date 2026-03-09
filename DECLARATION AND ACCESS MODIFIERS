@@ -180,9 +180,15 @@ Package statement:
 3. Security: Package provides us security, by making the class as default we can access that class only in that package not in any other package.
 
 
-
-
-
+package dailypractice.java.corejava;// Like this we can also create our own package or region where we have to store the file
+class B{
+    public static void main(String[] args) {
+       System.out.println("helo");
+    }
+}
+But in this case we have to compile this program in different way(javac -d. B.java) hare -d means destination and . after d is root directory.
+After compiling this program our .class file made at the destination which we give in corejava in java in dailypractice. then to run the .class file we have to use(java dailypractice.java.corejava.B)
+And it will print helo.  
 
 
 

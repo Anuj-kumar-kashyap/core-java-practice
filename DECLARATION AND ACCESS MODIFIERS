@@ -189,6 +189,68 @@ class B{
 But in this case we have to compile this program in different way(javac -d. B.java) hare -d means destination and . after d is root directory.
 After compiling this program our .class file made at the destination which we give in corejava in java in dailypractice. then to run the .class file we have to use(java dailypractice.java.corejava.B)
 And it will print helo.  
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+MODIFIERS:
+1. public           4. final        7. strictfp          10. native
+2. private          5. abstract     8. synchronized      11. volatile
+3. protected        6. static       9. transient
+12. default
+These modifiers can used with class, variables, method, block
+Access modifiers: public, private, protectd, default.
+
+Class modifiers: modifiers that are used with class.
+1. public (outer & inner)
+2. private(inner)
+3. protected(inner)
+4. static(inner)
+5. abstract(outer & inner)
+6. final
+7. strictfp
+class A{ //outer class
+    class B{ //inner class
+
+    }
+}
+
+public: public class is accessible everywhere.
+Suppose we have two files A & B and we want to access the class of file A in file B then first we have to import the package of that file on top,
+and then we hvae to create the object of that needed class.
+We use Scanner class everywhere because it is in the util package and it is public there.
+publc method, and public variables are also accessible everywhere.
+
+-----------------------------------------------------------------------------------------------------------
+|                      A package             |             B package  
+| ----------|---------------------------------------------------------------------------------------------                                           
+|  within   |                                |
+|  class A  |                                    |
+| ----------------------                                           |
+|                                            |
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

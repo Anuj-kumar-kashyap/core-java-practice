@@ -257,6 +257,67 @@ class A{
 
 
 
+final: final is a modifier. which is applicable with class, method, variables. 
+used when we don't want that to override the method.
+
+class parent{
+    public void property(){
+        System.out.println("gold + cash + silver");
+    }
+    public void marry(){
+        System.out.println("priya");
+    }
+}
+class child extends parent{
+    public void marry(){
+        System.out.println("cash + gold+ anushka");
+    }
+}
+//when child is not satisfied by parent class method so, child has right to override the parent class function
+But if parent want's that no one can override its merry funciton then parent have to use final with its method.
+If we try to access the marry method after final then we get an error(//Cannot override the final method from parent)
+
+There is no sequence between modifier we can use any modifier after or bofore of any modifier.
+
+final class: If we make any class as final then inheritance does not work, we cannot inherit the final class.
+is a relationship will stop(inheritance).
+final class parent{
+    public void property(){
+        System.out.println("Gold+cash+silver");
+     }
+     final public void marry(){
+        System.out.println("priya");
+     }
+}
+class child extends parent{// The type child cannot subclass the final class parent
+    public void marry(){
+        System.out.println("cash+car+anushka");
+     }
+
+}
+
+Bydefault methods of final class are also final, but variables are not.
+
+final class parent{
+    int x = 10;
+    public void property(){
+        System.out.println("gold+cash+silver");
+    }
+    public static void main(String[] args) {
+        parent p = new parent();
+        p.x = 1000;
+        System.out.println(p.x);//here we get 1000
+    }
+}
+
+abstract: abstract is a modifier, applicable with method and class but not with variables.
+
+
+
+
+
+
+
 
 
 

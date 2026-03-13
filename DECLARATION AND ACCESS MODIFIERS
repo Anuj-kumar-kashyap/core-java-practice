@@ -197,7 +197,7 @@ MODIFIERS:
 3. protected        6. static       9. transient
 12. default
 These modifiers can used with class, variables, method, block
-Access modifiers: public, private, protectd, default.
+Access modifiers: provides accessibility (public, private, protectd, default.)
 
 Class modifiers: modifiers that are used with class.
 1. public (outer & inner)
@@ -218,26 +218,28 @@ Suppose we have two files A & B and we want to access the class of file A in fil
 and then we hvae to create the object of that needed class.
 We use Scanner class everywhere because it is in the util package and it is public there.
 publc method, and public variables are also accessible everywhere.
+                                         
 
------------------------------------------------------------------------------------------------------------
-|                      A package             |             B package  
-| ----------|---------------------------------------------------------------------------------------------                                           
-|  within   |                                |
-|  class A  |                                    |
-| ----------------------                                           |
-|                                            |
- 
+Suppose we have two packages a & b their we have class A,B and C in package a. Class B inherites class A and C class doesn't inherites any class.
+And we have b packaeg their we have two classes X & Y, where X is inherited
+SO how we can access classes objects in different locations:
 
+                         a package                          |              b package
+            within        Inheritid class    non inherited  |       inherited       non inherited 
+           class A         class B               class C    |        claass X         class Y
+                                                            |
+public     yes              yes                    yes      |           yes             yes
+                                                            |
+default    yes               yes                    yes                  no              no
+members
 
+private    yes               no                      no                  no               no
+members
 
+protected   yes              yes                     yes                 yes             no
+members                                                             (by child ref.)
 
-
-
-
-
-
-
-
+If we have to access the protected members of different package, by using child reference.
 
 
 

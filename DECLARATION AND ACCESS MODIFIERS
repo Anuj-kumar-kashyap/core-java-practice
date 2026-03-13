@@ -311,17 +311,50 @@ final class parent{
 }
 
 abstract: abstract is a modifier, applicable with method and class but not with variables.
+Such method which not have implementation, for declaring abstract method we use abstracct modifier.
+why we have to declare method as abstract? two reasons wither either we do not getting information by client or 
+we get the information by client but we are not able to design the code/logic, So child class is responsible to provide the implentation.
+parent provide guidlines to child.
 
+final abstract void m1();//illegal combination of modifiers abstract & final
+static abstract void m1()// invalid combination of modifiers abstract & static
+strictfp abstract void m1();//illegal combination of modifiers abstract & strictfp
+private abstract void m1();//illegal combination of modifiers abstract & private
+public abstract void m1();// valid
+protected abstract void m1();// valid
+Because when we use public and protected then it is accesible to child easily and they execute but
+in the case of illegal combinations they are not accessible to the child.
 
+abstract class: class is abstract in two cases onlu.
+1. we don't want that anyone can create object of our class(class cannot instantiated), means has a relationship is restricted.
 
+abstract class parent{
+    public static void main(String[] args) {
+        parent p = new parent();//Cannot instantiate the type parent
+        p.x= 100;
+        System.out.println(p.x);
+    }
+}
 
+2. when their is atleast one abstract method is present our class.
 
+class parent{//The type parent must be an abstract class to define abstract methods
+    abstract void m1();
+    public static void main(String[] args) {
+       
+    }
+}
+-----------------------------------------------
+abstract class parent{
+    abstract void m1();
+    abstract void m2();
+}
+abstract class child extends parent{
+    void m1(){
 
+    }
 
-
-
-
-
+}
 
 
 

@@ -237,17 +237,23 @@ private    yes               no                      no                  no     
 members
 
 protected   yes              yes                     yes                 yes             no
-members                                                             (by child ref.)
+members                                                          (by child ref. only)
 
-If we have to access the protected members of different package, by using child reference.
+Accessibility order: public > protected > default > private
 
+Q. How to access private member outside the class?
+By using public method we can acccess private variables/members of a class.
 
-
-
-
-
-
-
+class A{
+    public static void main(String[] args) {
+        private int x = 10;// Illegal modifier for parameter x; only final is permitted
+        public int x = 10;// Illegal modifier for parameter x; only final is permitted
+        protected int x = 19;// Illegal modifier for parameter x; only final is permitted
+        int x = 12;// Duplicate local variable x
+    }
+}
+// public, private, procted & default they are not accessible in any method.
+//Only class level, not method level
 
 
 

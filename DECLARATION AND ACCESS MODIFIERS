@@ -373,6 +373,49 @@ Because we get different outputs, for uniformity we have to use strictfp modifie
 So, without strictfp we get platform dependent output, but after strictfp we get platform independent output.
 Now it depends upon IEEE 754 standard (the universally adopted technical standard for representing and computing floating-point numbers in computer systems)
 If we declare the whole class with strictfp that means every method present inside that class follw the IEE 754 standard.
+As of release JDK 17, all floating point expressions are evaluated strictly and 'strictfp' is not required.
+
+final: A modifier, applicable with class, method and variables.
+if used with class: then that class not inherited
+if used with method: that method cannot be overriden
+if used with variable: cannot change the value of that variable
+A we know variables are of three tyeps instance, static, and local.
+
+Instance var: If we use final with instance var. then we have to assign the value of that var. at the time of declaration. Otherwise we get an error.
+JVM does not provide any bydefault value to the final instance var. only provide to instance variables.
+class A{
+   final int i;// instance variable
+   {// instance block
+    i = 10;// we can assign the value to our final instance var. in this way also.
+   }
+
+}
+
+class A{
+   final int i;
+   A(){// Constructor
+    i = 10;// we can assign the value to our final instance var. in this way also.
+   }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

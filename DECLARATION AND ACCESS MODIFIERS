@@ -381,7 +381,7 @@ if used with method: that method cannot be overriden
 if used with variable: cannot change the value of that variable
 A we know variables are of three tyeps instance, static, and local.
 
-Instance var: If we use final with instance var. then we have to assign the value of that var. at the time of declaration. Otherwise we get an error.
+final Instance var: If we use final with instance var. then we have to assign the value of that var. at the time of declaration. Otherwise we get an error.
 JVM does not provide any bydefault value to the final instance var. only provide to instance variables.
 class A{
    final int i;// instance variable
@@ -399,7 +399,17 @@ class A{
 
 }
 
+final static var: If we use final with static var. then we have to assign the value of that var. at the time of declaration. Otherwise we get an error.
+JVM does not provide any bydefault value to the final static var. only provide to static variables.
 
+class A{
+   static int i;
+   static{// static block
+    i = 10;// we can assign the value to our final static var. in this way also.
+   }
+}
+
+final local var: 
 
 
 

@@ -356,6 +356,29 @@ abstract class child extends parent{
 
 }
 
+strictfp: A modifier introduced in JDK(1.2v). Applicable with methods & class.
+
+public class A {
+
+    public static void main(String[] args) {
+        System.out.println(10.0/3);// 3.333333333333, here we don't know how much 3 after decimal we get it depends upon OS architecture
+    }
+}
+
+On different systems it give different output:
+16 bit OS : 8-10 no. of 3 after decimal
+31 bit OS : 12-14 no. of 3 after decimal
+42 bit OS : 14-16 no. of 3 after decimal
+Because we get different outputs, for uniformity we have to use strictfp modifier.
+So, without strictfp we get platform dependent output, but after strictfp we get platform independent output.
+Now it depends upon IEEE 754 standard (the universally adopted technical standard for representing and computing floating-point numbers in computer systems)
+If we declare the whole class with strictfp that means every method present inside that class follw the IEE 754 standard.
+
+
+
+
+
+
 
 
 

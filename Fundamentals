@@ -26,7 +26,7 @@ Control statements(11): if, else, for, do, while, switch, case, break, continue,
 Exception handling(6): try, catch, throw, throws, finally, assert(1.4v)
 Object related(4): new, instanceof, super, this
 Class related(6): class, import, package, implements, extends, interface
-(void & enum(1.5v)): These two doesn't belogs to any cattegory.
+(void & enum(1.5v)): These two doesn't belogs to any category.
 
 Data types: Primitive & non-primitive 
 primitives are further divided into:
@@ -139,7 +139,7 @@ Primitive         Default value    Non-primitive(wrapper class)
   long(8B)   ->         0       ->       Long
   float(4B)  ->        0.0f     ->       Float
 double(8B)   ->        0.0d     ->       Double  
-   Char2B)   ->       space     ->       Character
+   Char(2B   ->       space     ->       Character
 boolean(1b)  ->       faluse    ->       Boolean
 
 What we can declare inside a class:

@@ -140,7 +140,7 @@ Primitive         Default value    Non-primitive(wrapper class)
   float(4B)  ->        0.0f     ->       Float
 double(8B)   ->        0.0d     ->       Double  
    Char(2B   ->       space     ->       Character
-boolean(1b)  ->       faluse    ->       Boolean
+boolean(1b)  ->       false    ->       Boolean
 
 What we can declare inside a class:
 class First{
@@ -171,7 +171,7 @@ class First{
         //instance method
     }
 }
-If we declare any variable inside inside any block(Block maybe: method, constructor, basically b/w {} ) then it is known as local variable.
+If we declare any variable inside any block(Block maybe: method, constructor, basically b/w {} ) then it is known as local variable.
 
 Types of variables on the basis of position in a class-
 1. Instance/object-level/non-static variables: Values of these type of variables varies from object to object.
@@ -194,7 +194,7 @@ public class First {
 }
 
 2. Static/class level variables: Values doesn't varies from object to object, Common for all objects.
-By default value(0) provided bu JVM, loades when class load, Lifecycle(static var) = Lifecycle(class), Load inside method area.
+By default value(0) provided by JVM, loades when class load, Lifecycle(static var) = Lifecycle(class), Load inside method area.
 Declare inside the class but outside all the blocks with static keyword. Accessible by (reference variable, class name and directly)
 public class First {
     static int x;
@@ -210,7 +210,7 @@ public class First {
 Best way to access static variables is by class name.
 
 3. Local/temporary/stack/automatic variable: Declare inside the block(block maybe method, constructor or any other)
-when these blocks loades into the memory at that time local variables also load automatically into the memory. Store inside the stack area.
+when these blocks loads into the memory at that time local variables also load automatically into the memory. Store inside the stack area.
 These variables do not have their default values by JVM, not even garbage, we have to assign their default values. Their is no garbage value concept in java.
 public class First {
 
@@ -274,7 +274,7 @@ public class First {
         m1(30, 60, 40);//130  
     }
 }
-Because, is finds the total of arguments we provide, it meams x internally implements an array.
+Because, it finds the total of arguments we provide, it meams x internally implements an array.
 So, in public static void main(String[] args), instead of using[] we can also use (...).
 Valid/Invalid case:
 m1(int ... x) {//valid

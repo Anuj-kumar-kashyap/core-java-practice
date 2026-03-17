@@ -420,10 +420,18 @@ final local var:
 
 
 
+volatile: A modifier, applicable only with variables.
 
+Suppose we have int x = 5; and there are multiple threads that want to access the value of x which is 5,
+t1 thread updated the value of x by 10
+So t2 thread not getting tha actual value of x which is 5 t2 get the updated value of x by t1 which is 10
+So, every new thread getting the value which is updated by the previous thread.
 
-
-
+But if we use volatile with int x then local copy of x  will be provided to the threads.
+volatile int x = 5;// master copy
+now, if t1 thread try to access the value of x then the local copy of value of x which is 5 will be provided to the thread.
+We can say that without volatile the problem of data inconsistency is occur.
+Major disadvantage of volatile is if there are n no. of threads want to access the value of x then there are n no. of local copies have been made. Due to which we need high storage which leads to increase in space complexity.
 
 
 

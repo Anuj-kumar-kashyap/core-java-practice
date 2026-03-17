@@ -433,7 +433,7 @@ now, if t1 thread try to access the value of x then the local copy of value of x
 We can say that without volatile the problem of data inconsistency is occur.
 Major disadvantage of volatile is if there are n no. of threads want to access the value of x then there are n no. of local copies have been made. Due to which we need high storage which leads to increase in space complexity.
 
-
+transient: A modifier, applicable with variables.
 
 
 

@@ -445,7 +445,18 @@ synchronized{
    //synchronized block
 }
 
-
+               class        method          variable
+public          yes           yes              yes
+protected       IC            yes              yes  
+private         IC            yes              yes
+final           yes           yes              yes  
+abstract        yes           yes              no
+static           IC           yes              yes
+strictfp        yes           yes              no  
+volatile        no            no               yes
+transient       no            no               yes 
+synchronized    no            yes               no
+native          no            yes               no
 
 
 

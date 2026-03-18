@@ -433,7 +433,26 @@ now, if t1 thread try to access the value of x then the local copy of value of x
 We can say that without volatile the problem of data inconsistency is occur.
 Major disadvantage of volatile is if there are n no. of threads want to access the value of x then there are n no. of local copies have been made. Due to which we need high storage which leads to increase in space complexity.
 
-transient: A modifier, applicable with variables.
+transient: A modifier, applicable with variables. 
+
+Serialization: Process of sending the object from one computer to another computer via the network.
+Only instance variables, methods, block participates in serialization. static methods & variables does not participate in the serialization.
+Inside object their are some information (username address), sensitive information as well (password) & we want to send this obj via network to the another machine and we want that our password does not go through the network due to the security purpose
+for that we use 'transient' keyword with password, now JVM will provide a default value to the password that default value will pass through the network at the place of password.
+
+synchronized: A modifier, applicable with methods & blocks but not for class and variables. It solves the problem of data inconsistency
+synchronized{
+   //synchronized block
+}
+
+
+
+
+
+
+
+
+
 
 
 

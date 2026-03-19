@@ -459,6 +459,42 @@ synchronized    no            yes               no
 native          no            yes               no
 
 
+Interfaces: 
+
+Def_1: Any Service Requirement Specification (SRS) is called interface. 
+sunmicrosystem compnay provide a (SRS)unimplemented code/set of rules to different comapanies(mysql, oracle, mongoDB, DB2) so that they can implement that unimplemented code for the connectivity with java.
+
+Ded_2: Interaction between client & vender by which client can access all hidden services(withdrawal, balance check, Deposit), ATM GUI screen.
+
+Def_3: Interface is an SRS, client-vender contract and all methods are 100% pure abstract is called interface.
+
+interface <Interface_name>{
+   //inside interface we can have variables & abstract methods(acc. to JDK v1.7)
+}
+interface is a pure abstract class
+
+methods inside interface are bydefault public & abstract, if we declare the methods of interface as private, protected, default then we get an error.
+interface Abc{
+   void m1();//compiler will treat this m1() method as public abstract void m1(); bydefault
+   public void m2();//same here no matter we declare as public by our own this is consider as(public & abstract)
+}
+They are public due to accessibility so that if any class wants to implements later they can, they are abstract because they are unimplemented.
+To inherit interface we use 'implements' keyword
+if any child class later wants to reduce the accessibility of methods of interface, if try (protected void m1()), here get error.
+---------------------------------------
+interface A {
+   void m1();
+   void m2(); 
+}
+class B implements A{//here we have to use abstract class B implements A for the unimplemented method m2 bec. that method is abstract
+   public void m1(){
+      //Here B class is incomplete because B inherits two methods m1 and m2 and it define only m1 not m2 bec. B don't know the implementation of m2 methos.
+   }
+
+}
+
+child is responsible to implements interfaces.
+
 
 
 

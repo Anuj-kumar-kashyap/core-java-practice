@@ -521,6 +521,38 @@ Some rules:
 3. A interface can extends any no. of interface.
 4. A interface cannot extends any class.
 
+X extends Y: here X & Y can be
+1. both classes (yes)
+2. both interfaces (yes)
+3. class, interface (no)
+4. interface, class(no)
+
+X extends Y, Z: here all 3 must be interface
+X extends Y implements Z: here XY are class, Z interface
+X implements Y,Z: X is class, Y,Z are interface
+X implements Y extends Z: illegal combination/invalid syntax (In extends & implements extends must be first then implements)
+
+So with interface methods only public & abstract are used any other modifier can cause error.
+interface cannot create any object.
+variables inside interface are public, static & final bydefault.
+interface A{
+   static int x = 10;// this var. is final bydefault we cannot change the value of variables of interface
+   public void m1();//when any child implements m1() 
+   // their maybe possibility it needs variable x so we can define supporting variable inside the interface 
+}//so we declare x as static so that it loads inside memory first
+
+If we want no one can create class object then we have to declare that class as abstract, inside abstract class their are some unimplemented and some are implemented methods.
+but in interface all methods are umimplemented.
+interface loads in the memory at the time of class load.
+with interface we can use transient & volatile modifier as well.
+
+
+
+
+
+
+
+
 
 
 

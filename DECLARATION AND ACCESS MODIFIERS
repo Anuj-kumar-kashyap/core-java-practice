@@ -495,9 +495,31 @@ class B implements A{//here we have to use abstract class B implements A for the
 
 child is responsible to implements interfaces.
 
+interface A {
+   void m1();//here class A has 2 abstract methods
+   void m2();
+}
+interface B extends A {//interface inherits another interface
+   void m3();//here class B has 4 abstract methods 2 of their own and two inherited
+   void m4();
+}
+//if we have 
+class X implements A {
+public void m1();//method implementation
+   //this class have to implement 2 methods m1(), m2()
+}
+but if,
+class X implements B{
+public void m1();//method implementation
+.
+      //this class have to implement 4 methods m1(), m2(), m3(), m4(). If this class left any method without implementation then again we have to use abstract keyword with this class
+}
 
-
-
+Some rules:
+1. A class can extends atmost one class.
+2. A class can implements any no. of interface.
+3. A interface can extends any no. of interface.
+4. A interface cannot extends any class.
 
 
 

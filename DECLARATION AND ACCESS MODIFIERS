@@ -593,9 +593,19 @@ interface A{
 
 }
 
+class String implements serializable{
+    //this string class implements serializable marker interface bydefault that is why our messages in the form of string travell across the network.
+}
+anything that inherits marker interface gets extra abilities due to hidden code(native code: written in any other programming language) inside marker interface.
 
-
-
+Some inbuilt marker interface in java: 
+1. serializable 
+2. clonable: we can make exact duplicate object of the existing object using clonable interface, provided by JVM due to backup purpose.
+3. RandomAccess
+4. SingleThreadModel
+5. Remote
+6. EventListener
+7. EnterpriseBean
 
 
 

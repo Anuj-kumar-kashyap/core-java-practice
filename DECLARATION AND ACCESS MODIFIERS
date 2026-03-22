@@ -608,6 +608,44 @@ Some inbuilt marker interface in java:
 7. EnterpriseBean
 
 
+Adapter class: adapter class implements interface, but it provide empty implementation.
+A simple java class that implements an interface and provide empty implementation of methods.
+
+
+Suppose we have an interface which consist many no. of methods, if a class extends that interface class needs to implement all those many methods inside it wheather it needs those all methods or not.
+using adapter class we can can implement only those methods whcih we need not extra methods.
+
+Some adapter classes in java:
+1. WindowAdapter
+2. KeyAdapter
+3. MouseAdapter
+4. MouseMotionAdapter
+5. FocusAdapter
+
+Difference between interface & abstract class:
+            interface                                   abstract class
+1. all methods are unimplemented       |   some methods are implemented and some are unimplemented
+2. we cannot create obj. of interface  |  we cannot create object of abstracat class as well
+3. no constructor inside interface     |   abstract class contains constructor
+4.  methods are public & abstract      |   methods can be abstract and public
+and public bydefault                   |
+5. all the variable are public, static |    there is no rule that variables must be public, static & final
+& final bydefault                      |
+                                       |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

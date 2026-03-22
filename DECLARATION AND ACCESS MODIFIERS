@@ -409,16 +409,23 @@ class A{
    }
 }
 
-final local var: 
+final local var: declare inside the constructor, block and method.
 
+public class A {
 
-
-
-
-
-
-
-
+    public static void main(String[] args) {
+        int i;//this var has no default value not even garbage
+    }
+}
+public static void main(String[] args) {
+        final int i;//this var has no default value not even garbage
+        System.out.println(i);//The local variable i may not have been initialized if we declare i as final then we must have to assign it a value
+    }
+public static void main(String[] args) {
+        final int i;//this var has no default value not even garbage
+        System.out.println("hello");//it prints hello successfully because we are not using the value of i
+    }
+we can also use final with formal parameter but then we cannot update values of parameters.
 
 volatile: A modifier, applicable only with variables.
 

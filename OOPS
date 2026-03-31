@@ -11,3 +11,32 @@ Some advantages of abstraction:
 2. Maintenance
 3. Modularity
 To achieve abstraction we use interfaces & abstract class.
+
+Encapsulation: process of binding of variables & methods for security purpose.
+Three pillars of security(data hiding, abstraction, encapsulation)
+
+Encapsulation = data hiding + abstraction
+
+Tightly encapsulated class: A class is tightly encapsulated iff all the variables inside that class are declared private.
+If parent class is loosly encapsulated then child class obviously become loosely ecpapsulated.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

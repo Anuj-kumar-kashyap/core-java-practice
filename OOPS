@@ -1,4 +1,13 @@
 OOP'S(object oriented programming structure): language that surrounds near the object. For real world programming we need object oriented programming.
+
 Data hiding: our secret data should not go out directly to the outside world.
 By using private variables we can hide our data. Now only the authorized person can access that data, which have username and password.
 
+Abstracation: Hiding the internal implementation(internal code) and provide the set of services.
+Example: ATM machine, we have various features like check min. balance, withdrawl balance, change PIN, transfer fund.(Services provided)
+All these features are implemented using separate function internally
+Some advantages of abstraction:
+1. Security
+2. Maintenance
+3. Modularity
+To achieve abstraction we use interfaces & abstract class.

@@ -1,5 +1,10 @@
 OOP'S(object oriented programming structure): language that surrounds near the object. For real world programming we need object oriented programming.
 
+Pure OOPS: all concepts of oops should be followed + using non-primitive data types only
+programming language which obeys the above two conditions such programming languages are pure Object oriented.
+java does not follow multiple inheritance & hybrid inheritance and using primitive data types like int, float, etc. So we can say that java is not pure object oriented.
+Their are some language like 'Ruby' & 'small talk' which are pure object oriented.
+
 Data hiding: our secret data should not go out directly to the outside world.
 By using private variables we can hide our data. Now only the authorized person can access that data, which have username and password.
 

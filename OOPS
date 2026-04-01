@@ -25,12 +25,72 @@ Encapsulation = data hiding + abstraction
 Tightly encapsulated class: A class is tightly encapsulated iff all the variables inside that class are declared private.
 If parent class is loosly encapsulated then child class obviously become loosely ecpapsulated.
 
+Relationship: provides reusability of code.
+There are 2 types of relationships
 
+1. Has - a relationnship: without inheritance we can use any methods of class, but we cannot modifi any method of the class we have to use the method provided as it is.
+import java.util.Scanner;
+public class A {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);// here Scanner class has a relationship with class A
+        int x = sc.nextInt();// here we are using method nextInt() without inheriting the Scanner class
+    }
+}
+One of the disadvantage of has-a relationship is that one class is dependend on another so we have to use that class as it is otherwise not. 
 
+has-a relationship further divided into two categories-
+(a) Composition: If we delete container objects there is no chance of existing of contained objects. Strong association b/w contained and container objects.
+This strong association has-a relationship is known as composition.
+(b) Aggregation: If we delete container objects there maybe chance of existing of contained objects. weak association b/w contained and container objects.
+This weak association has-a relationship is known as composition.
 
+2. Is-a relationship(inheritance): reusability of code + reduce dependency
+public class A {
+    public void m1(){
 
+    }
+}
+class demo extends A {
+// here in demo class we use m1() method as it is or we can also modify it. 
+}
 
+has-a relationship further divided into two categories-
+single-level inheritance, multi-level inheritance, hierarchical inheritance(possible in java)
+multiple & hybrid inheritance is not possible in java
 
+(a) Single-level inheritance: Only two classes are invloved.
+class Parent{
+    public void m1(){
+
+    }
+    public void m2(){
+
+    }
+}
+class child extends Parent{
+    public void m3(){
+
+    }
+}
+class Test {
+    public static void main(String[] args) {
+        Parent p1 = new Parent();
+        child c1 = new child();
+        Parent p2 = new child();
+        child c2 = new Parent();//error: Type mismatch: cannot convert from Parent to child
+    }// child class cannot hold parent class
+}
+
+(b) multi-level inheritance:
+class A{
+    public void m1();
+}
+class B extends A{// class B has 2 methods m2() of its own and m1() inherited 
+    public void m2();
+}
+class C extends B{// class C has 3 methods m3() of its own and m1(), m2() inherited 
+    public void m3();
+}
 
 
 

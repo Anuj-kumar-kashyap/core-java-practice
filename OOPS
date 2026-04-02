@@ -140,7 +140,7 @@ class B extends A {// this class as-well. B->A->object class
 Here it is not multiple inheritance because class B extends A and then object class indirectly B extends object class not directly
 so indirect multiple inheritance is allowed but direct multiple inheritance is not
 
-cyclic-inheritance is not possible.
+cyclic-inheritance is not supported by java.
 class A extends B{//The hierarchy of the type A is inconsistent
 
 }
@@ -148,7 +148,8 @@ class B extends A{//Cycle detected: a cycle exists in the type hierarchy between
     
 }
 
-Hybrid-inheritance is also not possible.
+Hybrid-inheritance is also not supported by java. Due to diamond problem in multiple inheritance it is not allowed.
+
 
 
 

@@ -150,11 +150,33 @@ class B extends A{//Cycle detected: a cycle exists in the type hierarchy between
 
 Hybrid-inheritance is also not supported by java. Due to diamond problem in multiple inheritance it is not allowed.
 
+int m1(int)//return type, function name, list of aarguments in C++
+method_name(list of arg)// in java method signature have this only
+
+Polymorphism(poly+morphism):  
+A person has many form of itself but at a time only a single form will be executed.
+
+In C language we have to remember these 4 functions name even they are performing the same task, this is bec in C lang we dont have polymorphism.
+absint(int) -> absolute value of int
+absfloat(float) -> absolute value of float
+absdouble(double) -> absolute value of double
+abschar(char) -> absolute value of char
+
+But in C++ and java bec we have polymorphism so we can have multiple functions of same name.
+abs(int)
+abs(float)
+abs(double)
+abs(char)
+same function but have many forms an example of polymorphism.
 
 
 
 
 
+
+On the basis of time there are mainly 2 types of polymorphism- Compile time and runtime
+
+1. Compile time Polymorphism: 
 
 
 

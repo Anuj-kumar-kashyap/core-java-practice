@@ -100,6 +100,8 @@ public class First {
         System.out.println(a);
     }
 }
+
+Data type promotion diagram
 byte -> short -> int -> long -> float -> double
 char - > int -> long.. here we can store int into char also.
 In this flow we can store the values of different data types in difff types. but vice versa is not true.

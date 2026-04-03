@@ -169,16 +169,48 @@ abs(double)
 abs(char)
 same function but have many forms an example of polymorphism.
 
-
-
-
-
-
 On the basis of time there are mainly 2 types of polymorphism- Compile time and runtime
 
-1. Compile time Polymorphism: 
+1. Compile time Polymorphism(static,early binding): If we are able to find at compile time that which form of the specific method will be executed is k/a compile-time polymorphism.
+Because it is defined at compile time that whcih form will be executed so it is called early binding.
+which method will be execute is decided by reference variable.
 
+class A {
+    public void m1(){
+        System.out.println("1");
+    }
+    public void m1(int x){
+        System.out.println(x);
+    }
+    public void m1(double y){
+        System.out.println(y);
+    }
+    public static void main(String[] args) {
+        A a = new A();
+        a.m1();// decide at compile time
+        a.m1(10);// decide at compile time
+        a.m1(10.4);// decide at compile time
+    }
+}
 
+examples of CTP method overloading
+defining multiple forms of same name method inside a class called method overloading.
+
+class A {
+    public void m1(int i){
+        System.out.println(i);
+    }
+     public void m1(float d){
+        System.out.println(d+10);
+    }
+    public static void main(String[] args) {
+        A a = new A();
+        a.m1(10);//calls 1st form of m1
+        a.m1('a');//calls 1st form of m1, bec we can store a char into int
+        a.m1(10l);//calls 2nd form of m1, bec we can store long into double
+        a.m1(10.5);//error:The method m1(int) in the type A is not applicable for the arguments (double)
+    }
+}
 
 
 

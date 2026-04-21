@@ -193,7 +193,8 @@ class A {
     }
 }
 
-examples of CTP method overloading
+examples of CTP-
+method overloading:
 defining multiple forms of same name method inside a class called method overloading.
 
 class A {
@@ -206,7 +207,7 @@ class A {
     public static void main(String[] args) {
         A a = new A();
         a.m1(10);//calls 1st form of m1
-        a.m1('a');//calls 1st form of m1, bec we can store a char into int
+        a.m1('a');//calls 1st form of m1, bec we can store a char into int and it prints the unicode value of a
         a.m1(10l);//calls 2nd form of m1, bec we can store long into double
         a.m1(10.5);//error:The method m1(int) in the type A is not applicable for the arguments (double)
     }

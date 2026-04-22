@@ -213,12 +213,40 @@ class A {
     }
 }
 
+2. Runtime polymorphism(late binding/Dynamic): Which method will be called is decided at runtime. Parent and child have same name methods.
 
+example of RTP -
+method Overriding: If child is not satisfied with the method of parent then child can change the method this is known as method overriding.
+class parent{
+    public void m1(){//Overridden method: method which is overrided
+        System.out.println("1");
+    }
+}
+class child extends parent{
+    public void m1(){//Override method:method which overrides the another method 
+        System.out.println("4");
+    }
+}
+whcih method will be called is decided by the objects in overriding but in overloading decided by ref. variable.
 
+Rules for Overriding-
+Case1 Co-varient return type(JDK 1.5):
+Before JDK 1.5 different types of return type are not allowed, but from JDK 1.5 it is allowed.
+Co-varient return type is not valid for primitive data types.
 
+class parent{
+    public Object m1(){
+        return null;
+    }
+}
+class child extends parent{
+    public String m1(){ 
+        return null;
+    }
+}
+Here we have Object & child as return type. 
 
-
-
+Case2 
 
 
 

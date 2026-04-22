@@ -272,12 +272,37 @@ class child extends parent{
 
 Case3: 
 
+class parent{
+    public final void m1(){
+        System.out.println("1");
+        
+    }
+}
+class child extends parent{
+    public void m1(){//Error: Cannot override the final method from parent
+    System.out.println("2 ");// we cannot override the final methods of parent class
+    }
+}
 
+Case 4: 
 
+abstract class parent{
+    public abstract void m1();
+}
+class child extends parent{
+    public void m1(){
+        System.out.println("2");
+    }
+}
+It is valid but override bec. parent has no implementation or definition of its method so child is not satisfied
+child call that method and make its own definition so override.
 
-
-
-
+Parent      Class
+final  ->    Non-final (not allowed)
+non-final ->  final (allowed)
+abstract ->    non-abstract(allowed)
+synchronized   -> non-synchronized(allowed)
+strictfp   ->  non-strictfp(allowed) strictfp is removed from JDK 17
 
 
 

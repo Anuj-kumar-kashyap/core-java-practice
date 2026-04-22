@@ -246,9 +246,31 @@ class child extends parent{
 }
 Here we have Object & child as return type. 
 
-Case2 
+Case2: Accessibility
 
+class parent{
+    public void m1(){
+        
+    }
+}
+class child extends parent{
+    public private m1(){// Error bec we cannot decrease the accessibility of parent method we only increase
 
+    }
+}
+----------------------------------------------
+class parent{
+    private void m1(){
+        
+    }
+}
+class child extends parent{
+    public void m1(){//valid but not override bec. parent method is private it cannot be inherited
+
+    }//so we cannot say it can be override or not
+}
+
+Case3: 
 
 
 

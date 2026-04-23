@@ -304,6 +304,9 @@ abstract ->    non-abstract(allowed)
 synchronized   -> non-synchronized(allowed)
 strictfp   ->  non-strictfp(allowed) strictfp is removed from JDK 17
 
+Overriding is only when parent class method and child class method both are non static.
+
+Overriding with respect to Static methods:
 
 
 

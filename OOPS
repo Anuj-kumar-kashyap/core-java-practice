@@ -347,6 +347,74 @@ class child extends parent {
 }
 Here the m1() method child get from parent is hided due to own created m1() method by child. (Method hiding)
 
+class parent{
+    public static void m1(){
+        System.out.println("1");
+    }
+}
+class child extends parent {
+    public static void m1(){
+        System.out.println("2");
+    }
+}
+public class A {
+
+    public static void main(String[] args) {
+        parent p1 = new parent();
+        child c1 = new child();
+        parent p2 = new child();
+        p1.m1();//1 bec p1 is the ref. var. of parent
+        c1.m1();//2 bec c1 is the ref. var. of child
+        p2.m1();//1 bec p2 is the ref. var. of parent
+    }
+}
+
+Object based: Overriding (eg. of runtime polymorphism)
+Refference based: method overloading, method hiding(both the eg. of compile time polymorphism)
+
+If we see static method either in parent or in child overriding never exists.
+When method of both classes are static then this is method hiding.
+
+
+method-Overriding       |      method-hiding
+parent-child methods    |     here both static.
+are non static.         |
+Based on object.        |      Based on refference variable.
+Runtime polymorphism    |      Compile time polymorphism
+Handle by JVM           |      Handle by compiler
+
+Overriding with respect to var-arg method-
+
+class parent{
+    public void m1(int...x){
+        System.out.println("1");
+    }
+
+}
+class child extends parent{
+    public void m1(){
+        System.out.println("2");
+    }
+}
+Overriding, bec we make var-arg to non var-arg from parent to child.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

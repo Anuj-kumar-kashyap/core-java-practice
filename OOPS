@@ -392,14 +392,15 @@ class parent{
 
 }
 class child extends parent{
-    public void m1(){
+    public void m1(int x){
         System.out.println("2");
     }
 }
-Overriding, bec we make var-arg to non var-arg from parent to child.
+not Overriding, bec we make var-arg to non var-arg from parent to child.
+It is overloading bec. now child have 2 method one of his own and another of parent. 
 
-
-
+Overriding with respect to variables:
+not possible.
 
 
 

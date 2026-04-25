@@ -306,6 +306,68 @@ strictfp   ->  non-strictfp(allowed) strictfp is removed from JDK 17
 
 Overriding is only when parent class method and child class method both are non static.
 
+Case1: parent has non-static method and child has static.
+class parent{
+    public void m1(){
+        System.out.println("1");
+    }
+}
+class child extends parent {
+    public static void m1(){//Error in m1(): This static method cannot hide the instance method from parent
+        System.out.println("2");
+    }
+}
+This is not overriding bec. parent have non static method and child have static.
+Child's m1() method will load first in the memory due to static, then parent method will load when we creat parent class object.
+Both methods have different loading time but it has to be the same.
+
+Case2: parent has static method and child has non-static.
+class parent{
+    public static void m1(){
+        System.out.println("1");
+    }
+}
+class child extends parent {
+    public void m1(){//Error in m1(): This instance method cannot override the static method from parent
+        System.out.println("2");
+    }
+}
+Here also no overriding bec. parent have static method and child hav non static method.
+
+Case3: Both parent and child have static method.
+class parent{
+    public static void m1(){
+        System.out.println("1");
+    }
+}
+class child extends parent {
+    public static void m1(){
+        System.out.println("2");
+    }
+}
+Here the m1() method child get from parent is hided due to own created m1() method by child. (Method hiding)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Overriding with respect to Static methods:
 
 

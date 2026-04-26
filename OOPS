@@ -399,8 +399,28 @@ class child extends parent{
 not Overriding, bec we make var-arg to non var-arg from parent to child.
 It is overloading bec. now child have 2 method one of his own and another of parent. 
 
-Overriding with respect to variables:
-not possible.
+Overriding with respect to variables is not possible.
+--------------------------------------------------------------------------------------------------
+How many ways to create object of a class:
+Total 5 ways-
+1. Using new operator(new is keyword and operator as well):
+ Test t = new Test();
+
+2. Using clone() method:
+ Test t1 = new Test();
+  Test t2 = (Test)t1.clone();//making clone of t1 object then typcasting it, now t1 is of type test in t2.
+
+3. Using newInstance() method:
+      Test t1 = (Test)Class.forName("Test").newInstance();
+Role of Class.forName() method: If we pass any class name into this method then it loads that class into memory,
+and at that time we make their newInstance() (new object) then we typcast that it is of Test then store in Test ref. t1
+
+4. Using factory() method:
+  Syntax: Runnable r1 = Runnable.getRunnable();// here getRunnable is a factory method
+
+5. Using Deserialization:
+
+
 
 
 

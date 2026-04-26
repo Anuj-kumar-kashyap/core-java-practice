@@ -420,12 +420,21 @@ and at that time we make their newInstance() (new object) then we typcast that i
 
 5. Using Deserialization:
 
+  FileInputStream fis = new FileInputStream("abc.ser");
+   ObjectInputStream ois = new ObjectInputStream(fis);
+    Test = (Test) ois.readObject();
 
 
+Constructor: 
+Used to initialize an obeject, means initializing the instance variable.
+Constructor name is same as the class name.
+Activity which will be perform at the time of object creation will defined inside the constructor.
+public class A {
 
+    A(){//This is construcor
 
-
-
+    }
+}
 
 
 

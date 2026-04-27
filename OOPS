@@ -426,7 +426,7 @@ and at that time we make their newInstance() (new object) then we typcast that i
 
 
 Constructor: 
-Used to initialize an obeject, means initializing the instance variable.
+Used to initialize an obeject, or initializing the instance variable.
 Constructor name is same as the class name.
 Activity which will be perform at the time of object creation will defined inside the constructor.
 public class A {
@@ -435,9 +435,24 @@ public class A {
 
     }
 }
+-------------------------------------------------------------------------------
+Class Student{
+    int rollno;//instance variable
+    String name;//instance variable
+    Student(int rollno, String name){//Constructor 
 
+        this.rollno = rollno;//here we initialize the instance var.
+        this.name = name;//here we initialize the instance var.
 
+    }
+}
+Student s1 = new Student(101,"ajay");
 
+Rules for Constructor: 
+1. Class name & constructor name must be same.
+2. Constructor does not return any value, bec it does not call by any method it automatically call's
+when object created.
+3. 
 
 
 

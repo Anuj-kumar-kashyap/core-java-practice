@@ -453,13 +453,15 @@ Rules for Constructor:
 2. Constructor does not return any value, bec it does not call by any method it automatically call's
 when object created.
 3. Modifiers used with constructor: public, default, private and protected.
-5. Constructor can't be inherited but child class constructor can call parent class construtor.
+4. Constructor can't be inherited but child class constructor can call parent class construtor by using super().
  
 Default Constructor: 
 1. Every class (user defined & pre-define) must have at least one constructor.
 Compiler will create a default constructor.
 2. In case of deafult constructor the modifier usef with constructor is same as with the class.
 3. In default constructor super() line is present by default.
+
+Case1- super() line
 
 class A {// this is programmer generated         
     
@@ -472,33 +474,70 @@ class A {
     
 }
 
+Casw2- Class modifier and constructor modifier are same
+
+public class A {// Programmer generated
+
+}
+Cpmpiler generated
+public class A {
+    public A(){
+        // this is compiler generated code of the above 
+    }
+
+}
+
+Case3-
+
+public class A {// programmer generated
+
+    void A(){
+        
+    }
+}
+
+Now compiler generated
+public class A {
+    A(){
+        //here compiler created default constructor
+    }
+
+    void A(){
+
+    }
+}
+
+Case4- 
+
+class A{
+    A(int x){
+        // programmer genearated
+    }
+}
+Now compiler generated
+class A{
+    A(int x){
+        super();//compiler will add super()
+    }
+}
+
+Case5-
+
+class A{//programmer generated
+    A(int x){
+        this();
+    }
+    A(){
+        
+    }
+}
+Now compiler generated: In this case compiler cannot add super() to this because either we use this() or super()
+at a time not both.
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Overriding with respect to Static methods:
 
 
 

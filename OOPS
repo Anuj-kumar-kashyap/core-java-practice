@@ -452,7 +452,9 @@ Rules for Constructor:
 1. Class name & constructor name must be same.
 2. Constructor does not return any value, bec it does not call by any method it automatically call's
 when object created.
-3. 
+3. Modifiers used with constructor: public, default, private and protected.
+5. Constructor can't be inherited but child class constructor can call parent class construtor.
+ 
 
 
 

@@ -582,6 +582,8 @@ A a1 = new A();// here call goes to first construcor then this() inside first co
 last constructor and in last constructor no this() st. is present but we know that by default every constructor have super() to this super() statement call the object class
 If child class constructor call parent class constructor in that case we use super().
 
+When one constructor call another constructor and it calls another constructor this process of calling of constructor is known as constructor chaining.
+In above example when we back from object class firstly it prints(7), then prints(20) then prints(10).
 
 
 

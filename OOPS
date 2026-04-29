@@ -538,13 +538,49 @@ RAM have many sections but in the Programming POV RAM has 3 main sections.
 - Stack area: static, compile time
 - Heap area: Dynamic, runtime
 - Code section
+ 
+this() vs super(): Both are the constructor calls,one constructor can another constructor by using this() and super().
+- this() and super() are used inside the constructor only. 
+- In any constructor if we use super() and this() then they must be first statement inside that constructor.
 
+class A{
+    A(){
+        System.out.println("1");
+        this(10);// this is invalid this() must be first statememt inside constructor
+    }
+}
+------------------------
+class A{
+    A(){
+        super();
+        this();// invalid bec. here also this become the second st. it has to be first
+    }
+}
+It means we can use only either this() or super() inside the constructor at a time not both.
 
+NOTE: firstly all constructor call will be completed and then executes another statements.
+By default every constructor must have super().
 
+this(): 
+- used to call another constructor of it's own class.
 
+class A{
+    A(){
+        this(10); 
+        System.out.println(10);
+    }
+    A(int x){
+        this(2,5);
+        System.out.println(x+10);
+    }
+    A(int x, int y){
+        System.out.println(x+y);
+    }
 
-
-
+}
+A a1 = new A();// here call goes to first construcor then this() inside first constructor call next constructor like this call goes to the
+last constructor and in last constructor no this() st. is present but we know that by default every constructor have super() to this super() statement call the object class
+If child class constructor call parent class constructor in that case we use super().
 
 
 

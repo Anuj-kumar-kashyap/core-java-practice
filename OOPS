@@ -532,8 +532,12 @@ class A{//programmer generated
     }
 }
 Now compiler generated: In this case compiler cannot add super() to this because either we use this() or super()
-at a time not both.
+at a time not both, but cmpiler can add super() in A() method area.
 
+RAM have many sections but in the Programming POV RAM has 3 main sections.
+- Stack area: static, compile time
+- Heap area: Dynamic, runtime
+- Code section
 
 
 

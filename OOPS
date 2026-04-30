@@ -595,12 +595,36 @@ this() and super() must be inside |      we can use this and super anywhere(cons
 the constructor only              |        mehtods, blocks) but not in static methods.
                                   |
 
+class P{
+    int x;
+    int y;
+}
 
+class C extends P{
+    int a,b;
+    C(){
+        this.a = 10;// here this repr. current C class constructor instance var.
+        super.x = 50;// here super repr. parent P class constructor instance var.
+    }
+ }
+-----------------
+class P {
+    P(){
+        // this is valid bec. this is concrete class the class in whcih 
+    }//all methods are non abstract
+}
 
+abstract class P {
+    P(){
+         // valid 
+    }
+}
 
-
-
-
+interface P {
+    P(){
+         // invalid error: Interfaces cannot have constructors
+    }
+}
 
 
 

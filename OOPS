@@ -585,7 +585,15 @@ If child class constructor call parent class constructor in that case we use sup
 When one constructor call another constructor and it calls another constructor this process of calling of constructor is known as constructor chaining.
 In above example when we back from object class firstly it prints(7), then prints(20) then prints(10).
 
-
+super(), this()                   |           super, this
+constructor calls                 |             keywords
+to call same class constructor    |      To represent current class intance var. 
+we use this()                     |           we use this keyword
+to call parent class constructor  |      To represent parent calss intance var. 
+we use super()                    |            we use super keyword
+this() and super() must be inside |      we can use this and super anywhere(constructor,
+the constructor only              |        mehtods, blocks) but not in static methods.
+                                  |
 
 
 

@@ -643,25 +643,57 @@ Example:
 
 Because Runtime is a Singleton class hence all the ref var. r1, r2, r3 points to the same object.
 
-In java if we use == with primitves then it will perform value comparison. 
-And if we use == with non-primitives then it will perform ref. comparison.
+In java if we use '==' operator with primitves then it will perform value comparison. 
+And if we use '==' operator with non-primitives then it will perform ref. comparison.
 So, to prove that all the ref. in above example pointing to the same object we can write.
 S.O.P(r1 == r2);
 S.O.P(r1 == r3);
 
+equals() method of object class also perform the same ref. comparison.
+we have 1 more equals() method of String class but this used for value comparison.
 
+we can create our own Singleton class, to create we need.
+- Private Constructor
+- Static variable
+- Factory method
 
- 
-
-
-
-
-
-
-
-
-
-
+class A{
+    private static A a = null;// static variable
+    private A(){//private constructor
+    }
+    public A getTest(){// Factory method
+        if(a == null){
+            a = new A();
+        }
+        return a;
+    }
+}
+class InnerA {
+    public static void main(String[] args) {
+        A a = new A();// error: The constructor A() is not visible. Because constructor we try to access is declared private.
+    }
+}
+// if we allow constructor to call then there are multiple objects of class A then how class A be the singleton class, that's wy
+we declare constructor as private.
+--------------------------------------------------------------
+class A{
+    private static A a = null;// static variable
+    private A(){//private constructor
+    }
+    public static A getTest(){//Factory method
+        if(a == null){
+            a = new A();
+        }
+        return a;
+    }
+}
+class InnerA {
+    public static void main(String[] args) {
+        // here we are using Factory method to create the object
+        A a1 = A.getTest();// Every time we get same object
+        A a2 = A.getTest();//here also we get same object due to singleton class
+    }
+}
 
 
 

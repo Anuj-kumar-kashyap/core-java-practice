@@ -626,7 +626,32 @@ interface P {
     }
 }
 
+Singleton Class: When have to create exactly one object of a class. 
+If we try to create another object then the ref. refer to the already existing object, instead of creating the new object.
 
+Some singleton classes in java:
+- Runtime
+- ActionServlet
+- BusinessDelegate
+- ServiceLocator 
+and many more...
+
+Example:
+ Runtime r1 = Runtime.getRuntime();
+ Runtime r2 = Runtime.getRuntime();
+ Runtime r3 = Runtime.getRuntime();
+
+Because Runtime is a Singleton class hence all the ref var. r1, r2, r3 points to the same object.
+
+In java if we use == with primitves then it will perform value comparison. 
+And if we use == with non-primitives then it will perform ref. comparison.
+So, to prove that all the ref. in above example pointing to the same object we can write.
+S.O.P(r1 == r2);
+S.O.P(r1 == r3);
+
+
+
+ 
 
 
 

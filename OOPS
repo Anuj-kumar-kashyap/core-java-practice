@@ -649,6 +649,12 @@ So, to prove that all the ref. in above example pointing to the same object we c
 S.O.P(r1 == r2);
 S.O.P(r1 == r3);
 
+Another method to perform the ref. comparison is through Hash code-
+This method is of Object Class(hashCode method)
+S.O.P(r1.hashCode);//printing the hashCode(unique ID) of object that r1 points to
+S.O.P(r2.hashCode);//printing the hashCode(unique ID) of object that r2 points to
+If both hashCode are same then both the ref. var points to the same object otherwise not.
+
 equals() method of object class also perform the same ref. comparison.
 we have 1 more equals() method of String class but this used for value comparison.
 
@@ -694,6 +700,7 @@ class InnerA {
         A a2 = A.getTest();//here also we get same object due to singleton class
     }
 }
+
 
 
 

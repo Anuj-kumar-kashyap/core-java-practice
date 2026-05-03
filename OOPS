@@ -792,220 +792,57 @@ FAB
 SSB
 20
 main-method
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-----------------------------------------
+class parent{
+    static int x = 10;
+    static{
+        m1();
+        System.out.println("PFSB");
+    }
+    public static void main(String[] args) {
+        m1();
+        System.out.println("p-m-method");
+    }
+    static{
+        System.out.println(j);
+    }
+    public static void m1(){
+        System.out.println(j);
+    }
+    static int j = 20;
+}
+
+class child extends parent{
+    static int x = 100;
+    static{
+        m2();
+        System.out.println("CFSB");
+    }
+    public static void main(String[] args) {
+        m2();
+        System.out.println("c-m-method");
+    }
+    public static void m2(){
+        System.out.println(y);
+    }
+    static int y = 200;
+}
+
+for this type of program we also have some rule-
+1. Scan from parent to child, if get variable assign value 0, and static members get a serial number.
+2. Scan from top to down, if get variable assign their actual value. If get static block then execute it.
+3. Execute child class main-method.
+Output for this program is:
+0
+PFSB
+0
+0 
+200
+c-m-method
+
+static block: static block executes before then main-method.
+class load - static block executes
+Activity that we want to perform at class load time have to put that code in static block.
 
 
 

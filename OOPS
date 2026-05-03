@@ -700,12 +700,45 @@ class InnerA {
         A a2 = A.getTest();//here also we get same object due to singleton class
     }
 }
+ 
+We can also create ZZZ(2,3,4,5...)tan class.
 
+class A {
+    private static A a1 = null;
+    private static A a2 = null;
+    private A(){
 
+    }
+    public static A getA(){
+        if( a1 == null){
+            a1 = new A();
+            return a1;
+        }
+        else if(a2 == null){
+            a2 = new A();
+            return a2;
+        }
+        else{
+            if(Math.random() <= 0.5){
+                return a1;
+            }
+            else{
+                return a2;
+            }
+        }
+    }
+}
+In this program 2 objecct's will be created hence this is a doubleton class.
 
+Q. We are not allowed to create child class but parent class is not final. How it is possible?
+It is possible by creating private constructor inside parent class.
+class Parent{
+    private Parent(){
+        
+    }
+}
 
-
-
+Static Control flow: 
 
 
 

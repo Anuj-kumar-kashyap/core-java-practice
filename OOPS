@@ -740,18 +740,58 @@ class Parent{
 
 Static Control flow: 
 
+class A {
+    static int x = 10;
+    static{
+        m1();
+        System.out.println("FS8");
+    }
+    public static void main(String[] args) {
+        System.out.println("main-method");
+    }
+    static{
+        System.out.println("SSB");
+    }
+    public static void m1(){
+        System.out.println(y);
+    }
+    static int y = 20;
+}
 
+To answer this type of programs we have to remember some rules-
 
+1. Identify the static member from top to down and give the no. to each static member.
+       So in this give program first we have (static int x = 10;)- 1
+     x = 0 [Read Indirect Write Only] mode
+          then we have static{} block - 2
+          then we have main method - 3
+     again we have static{} - 4
+   then we have Public static void m1() - 5
+ then we have static int y = 20; - 6
+          Initializing y with 0
+    y = 0[Read Indirect Write Only] mode
 
+2. Again scan from top to down if we get variable assign actual value, or if we get static block then execute it.
+    So firstly we get x so initializing x with its actual value
+                        x = 10 [Read & Write mode]
+ then we get static{} block so we have to execute this block we have m1() in this block
+               m1() method have S.O.P(y)// so y have value 0 in memory this prints 0
+     then we have S.O.P("FSB")// it prints FSB  
+  
+    We not execute main method write now so then we have again static{} block
+   S.O.P("SSB");// it will print SSB
 
+  then we get m1() method in this we have S.O.P(y) now it has value 20 so we update value of y as 20
+                       y = 20[Read & Write] mode
 
-
-
-
-
-
-
-
+3. Execute main-method
+ so the main method prints// main-method
+So final output for this program is: 
+0
+FAB
+SSB
+20
+main-method
 
 
 

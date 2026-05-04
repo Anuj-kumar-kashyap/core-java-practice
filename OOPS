@@ -849,6 +849,79 @@ Yes, but only till JDK V1.6 after this version not possible.
 
 instance control flow: 
 
+class parent{
+    int i = 10;
+    {
+        m1();
+            System.out.println("FIB");
+        
+    }
+    parent(){
+        System.out.println("PC");
+    }
+    public static void main(String[] args) {
+        parent p = new parent();
+        System.out.println("m-m");
+    }
+    {
+        System.out.println("SIB");
+    } 
+    public void m1(){
+        System.out.println("j");
+    }
+    int j = 20;
+}
+To solve this type of programs we have some rules-
+these rules are followed on object creation, if we have no object then these rules are not applicable.
+1. marking of instance members(block or methods).
+       int i = 10; - 1
+        i = 0 [RIWO] 
+           m1(); - 2
+         parent() - 3
+       { - 4
+        System.out.println("SIB");
+    }
+      public void m1() - 5
+         int j = 20; - 6
+       j = 0 [RIWO]
+
+2. If get any Variable then assign actucal value to it top to down, if get instance block then execute it.
+             we get i variable assigning its actual value to it.
+              i = 10; [R & R] mode
+    Now, instance block m1() method it prints 0 
+      thsn inside block print st. prints // FIB
+  again get instance block executing it, its print st. prints// SIB
+   then we have j variable assigning its actual value to it
+                       j = 20 [R & R] mode
+3. Execute Constructor
+       parent(){
+        System.out.println("PC");
+    }
+it prints// PC
+
+and at last main method get executes.
+
+public static void main(String[] args) {
+        parent p = new parent();
+        System.out.println("m-m");
+    }
+It prints// m-m
+
+So, final output of the above program is:
+0
+FIB
+SIB
+PC
+m-m
+
+
+
+
+
+
+
+
+
 
 
 

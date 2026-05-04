@@ -844,8 +844,10 @@ static block: static block executes before then main-method.
 class load - static block executes
 Activity that we want to perform at class load time have to put that code in static block.
 
+Can we print any statement on console without main method(PSVM)..?
+Yes, but only till JDK V1.6 after this version not possible.
 
-
+instance control flow: 
 
 
 

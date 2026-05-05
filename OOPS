@@ -962,10 +962,37 @@ Now for this program we have further some rules-
                   j = [RIWO]
                   x = 0 [RIWO]
                   y = 9 [RIWO]
+Now O/P: 
+0
+FIB
+PC
+0
+CIB
+CC
 
-   
+Typecasting-
+syntax: A b = (c) d;// changing d to c and assigning to b and b is of type A
+A can be(class/interface), b(refrence var.), c(class/interface), d(ref. variable/object)
 
 
+Rule-1 The type of 'd' and 'c' must have relationship (Child-parent) or (parent-child) or same type. otherwise we will
+get compile time errorinconvertable type error). This rule is checked by compiler.
+
+Eg-1 
+Object o = new String("abc");
+StringBuffer sb = (StringBuffer) o;
+(A)          (b)    (c)         (d)
+In this example Rule1 is followed ( c & d have parent-child relationship)
+
+Eg-2
+String s = new String("abc");
+StringBuffer sb = (StringBuffer) s;
+    (A)      (b)      (c)       (d)
+Here we get CompileTimeErro( inconvertable type error)
+
+Rule-2
+A b = (c) d;
+'c' must be same or derived type of 'A' otherwise we will get compile time error.(incompatable type) 
 
 
 

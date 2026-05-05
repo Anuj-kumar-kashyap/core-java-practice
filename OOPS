@@ -913,9 +913,57 @@ FIB
 SIB
 PC
 m-m
+----------------------------
+class parent{
+    int i = 10; - 1
+    { - 2
+        m1();
+            System.out.println("FIB");
+        
+    }
+    parent(){ - 3
+        System.out.println("PC");
+    }
+    public static void main(String[] args) {
+        parent p = new parent();
+        System.out.println("p-m-m");
+    }
+    public void m1(){ - 4
+        System.out.println(j);
+    }
+    int j = 20; - 5
+}
+class child extends parent{
+    int x = 100; - 6
+    { - 7
+        m2();
+        System.out.println("IB");
+    }
+    child(){ - 8
+        System.out.println("CC");
+    }
+    public static void main(String[] args) {
+        child c = new child();
+        System.out.println("C-m-m");
+    }
+    public void m2(){ - 9 
+        System.out.println(y);
+        int y = 200; - 10
+    }
+}
+Now for this program we have further some rules-
+1. Marking from parent to child of instance members, if get variable assign it 0.
+2. Ecexute parent class instance block and assign actual value.
+3. Parent calss constructor will execute.
+4. Execute instance block and assign actual value to variables in child class.
+5. Execute the constructor of child class.
 
+                  i = 0 [RIWO]
+                  j = [RIWO]
+                  x = 0 [RIWO]
+                  y = 9 [RIWO]
 
-
+   
 
 
 

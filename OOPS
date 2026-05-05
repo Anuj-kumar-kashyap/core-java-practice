@@ -993,6 +993,10 @@ Here we get CompileTimeErro( inconvertable type error)
 Rule-2
 A b = (c) d;
 'c' must be same or derived type of 'A' otherwise we will get compile time error.(incompatable type) 
+   Object o = new String("abc");
+ StringBuffer sb = (StringBuffer) o;
+  (A)         b       C           d
+This is invalid according to Rule1 & 2
 
 
 

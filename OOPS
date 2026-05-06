@@ -992,12 +992,15 @@ Here we get CompileTimeErro( inconvertable type error)
 
 Rule-2
 A b = (c) d;
-'c' must be same or derived type of 'A' otherwise we will get compile time error.(incompatable type) 
+'c' must be same or derived type of 'A' otherwise we will get compile time error.(incompatable type).This rule is checked by compiler.
    Object o = new String("abc");
  StringBuffer sb = (StringBuffer) o;
   (A)         b       C           d
 This is invalid according to Rule1 & 2
 
+Rule-3 A b = (c) d ;
+The underlying object type of 'd' must be either same or drived type of 'c' otherwise we will get runtime error.(Runtime exception: ClassCastException)
+This rule is checked by JVM.
 
 
 

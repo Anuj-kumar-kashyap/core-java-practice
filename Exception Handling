@@ -1,1 +1,47 @@
+Coupling: If theri are 2 components and both are depends on each other this dependency is known as coupling.
+Eg-
+class A{// this class is Component 1
+    static int i = B.J;
+}
+class B extends A{// this class is Component 2
+    static int J = C.m1();
+}
+class C extends B{// this class is Component 3
+    public static void main(String[] args) {
+        return D.k;
+    }
+}
+class D extends C{// this class is Component 4
+    static int k = 10;
+    public static void main(String[] args) {
+        D d = new D();
+    }
+}
+Here i depends on J of B(B.J), we get J from return type of m1()(C.m1()), and return type of m1() is K of D (D.K)
+So, here we have lot's of dependency A -> B -> C tightly coupled. Tightly coupling is not preferred, it will always be low.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

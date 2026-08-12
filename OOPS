@@ -1002,7 +1002,7 @@ Rule-3 A b = (c) d ;
 The underlying object type of 'd' must be either same or drived type of 'c' otherwise we will get runtime error.(Runtime exception: ClassCastException)
 This rule is checked by JVM.
 
-a
+
 
 
 
